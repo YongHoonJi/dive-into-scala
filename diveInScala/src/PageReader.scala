@@ -8,7 +8,6 @@ class PageReader(){
   def readFile(uri: String): Option[Iterator[String]] = uri match {
     case fileEquals() =>
       try {
-        println(uri)
         Some(Source.fromFile(uri).getLines())
       }
       catch {
